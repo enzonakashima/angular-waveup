@@ -1,3 +1,3 @@
 # angular-waveup
 
-[Edit on StackBlitz ⚡️](https://stackblitz.com/edit/angular-waveup)
+Aplicação de esportes náuticos com Angular 
