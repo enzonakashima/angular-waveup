@@ -1,11 +1,6 @@
 /* Global Style */
 
-html {
-  font-family: 'montserrat', Arial, sans-serif;
-  margin: 6px;
-  background: rgb(28, 143, 199);
-  background: var(--blue);
-}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
 
 :root {
   --blue: linear-gradient(
@@ -16,6 +11,16 @@ html {
     rgba(67, 130, 230, 1) 100%,
     rgba(87, 141, 221, 1) 100%
   );
+}
+
+* {
+  font-family: 'Poppins', sans-serif;
+}
+
+html {
+  margin: 6px;
+  background: rgb(28, 143, 199);
+  background: var(--blue);
 }
 
 .button:hover,
