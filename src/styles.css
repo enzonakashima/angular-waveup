@@ -1,24 +1,24 @@
 /* Global Style */
 
-* {
-  font-family: 'Roboto', Arial, sans-serif;
+html {
+  font-family: 'montserrat', Arial, sans-serif;
+  margin: 6px;
+  background: rgb(28, 143, 199);
+  background: var(--blue);
 }
 
-/* Login Component*/
-
-app-login * {
-  background-color: rgb(255, 255, 255);
+:root {
+  --blue: linear-gradient(
+    90deg,
+    rgba(28, 143, 199, 1) 0%,
+    rgba(76, 144, 205, 1) 54%,
+    rgba(28, 110, 195, 1) 100%,
+    rgba(67, 130, 230, 1) 100%,
+    rgba(87, 141, 221, 1) 100%
+  );
 }
 
-app-login .teste {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.fancy-button3 i.material-icons {
-  background-color: #0275c2;
-  color: white;
-  font-size: 60px;
-  padding: 10px;
+.button:hover,
+button:hover {
+  opacity: 0.8;
 }
