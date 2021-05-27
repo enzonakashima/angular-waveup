@@ -1,0 +1,15 @@
+<div id="container">
+  <h2>Eventos</h2>
+  <div id="event" *ngFor="let event of events">
+
+    <h3>
+      <a [title]="event.name + ' details'" [routerLink]="['/events', event.id]">{{event.name}}</a>
+    </h3>
+
+    <p *ngIf="event.description">
+      Descrição: {{event.description}}
+    </p>
+
+
+  </div>
+</div>
