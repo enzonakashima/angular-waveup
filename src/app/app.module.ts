@@ -6,14 +6,23 @@ import { AppComponent } from './app.component';
 import { HelloComponent } from './hello.component';
 import { RouterModule } from '@angular/router';
 import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
 
 @NgModule({
   imports: [
     BrowserModule,
     FormsModule,
-    RouterModule.forRoot([{ path: '', component: LoginComponent }])
+    RouterModule.forRoot([
+      { path: '', component: LoginComponent },
+      { path: 'register', component: RegisterComponent }
+    ])
   ],
-  declarations: [AppComponent, HelloComponent, LoginComponent],
+  declarations: [
+    AppComponent,
+    HelloComponent,
+    LoginComponent,
+    RegisterComponent
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
