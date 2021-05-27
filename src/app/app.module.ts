@@ -8,6 +8,7 @@ import { RouterModule } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { EventsComponent } from './events/events.component';
+import { TopBarComponent } from './top-bar/top-bar.component';
 
 @NgModule({
   imports: [
@@ -16,7 +17,8 @@ import { EventsComponent } from './events/events.component';
     RouterModule.forRoot([
       { path: '', component: LoginComponent },
       { path: 'register', component: RegisterComponent },
-      { path: 'events', component: EventsComponent }
+      { path: 'events', component: EventsComponent },
+      { path: 'top-bar', component: TopBarComponent }
     ])
   ],
   declarations: [
@@ -24,7 +26,8 @@ import { EventsComponent } from './events/events.component';
     HelloComponent,
     LoginComponent,
     RegisterComponent,
-    EventsComponent
+    EventsComponent,
+    TopBarComponent
   ],
   bootstrap: [AppComponent]
 })
