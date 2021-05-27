@@ -24,10 +24,3 @@ a {
   color: white;
 }
 
-button {
-  margin-top: 6px;
-  background: rgb(27, 134, 187);
-  border: 1px solid rgb(27, 134, 187);
-  border-radius: 4%;
-  padding: 4px;
-}
