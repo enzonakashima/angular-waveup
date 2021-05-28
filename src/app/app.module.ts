@@ -15,6 +15,7 @@ import { HttpClientModule } from '@angular/common/http';
 import localePt from '@angular/common/locales/pt';
 import { registerLocaleData } from '@angular/common';
 import { LOCALE_ID, DEFAULT_CURRENCY_CODE } from '@angular/core';
+import { CartComponent } from './cart/cart.component';
 
 registerLocaleData(localePt);
 
@@ -29,7 +30,8 @@ registerLocaleData(localePt);
       { path: 'register', component: RegisterComponent },
       { path: 'events', component: EventsComponent },
       { path: 'top-bar', component: TopBarComponent },
-      { path: 'events/:eventId', component: EventDetailsComponent }
+      { path: 'events/:eventId', component: EventDetailsComponent },
+      { path: 'cart', component: CartComponent }
     ])
   ],
   declarations: [
@@ -39,7 +41,8 @@ registerLocaleData(localePt);
     RegisterComponent,
     EventsComponent,
     TopBarComponent,
-    EventDetailsComponent
+    EventDetailsComponent,
+    CartComponent
   ],
   bootstrap: [AppComponent],
   providers: [

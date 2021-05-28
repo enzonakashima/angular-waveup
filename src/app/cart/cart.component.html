@@ -1,0 +1,28 @@
+<div class="container-fluid">
+  <app-top-bar></app-top-bar>
+  <h3>Confirmação</h3>
+
+  <div class="cart-item" *ngFor="let item of items">
+    <span>{{item.name}}</span>
+    <span id="price">{{item.price | currency}}</span>
+    <button id="x">x</button>
+  </div>
+
+  <form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()">
+    <div>
+      <label for="number">
+      NÚMERO DO CARTÃO
+    </label>
+      <input id="number" type="number" formControlName="number" />
+    </div>
+
+    <div>
+      <label for="expiration">
+      VALIDADE
+    </label>
+      <input id="expiration" type="date" formControlName="expiration" />
+    </div>
+
+    <button class="button" type="submit">Finalizar</button>
+  </form>
+</div>

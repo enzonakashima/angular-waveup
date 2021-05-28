@@ -1,0 +1,30 @@
+h3 {
+  margin-top: 10px;
+}
+.cart-item {
+  width: 100%;
+  min-width: 250px;
+  max-width: 450px;
+  display: flex;
+  justify-content: space-between;
+  padding: 16px 28px;
+  margin-bottom: 8px;
+  border-radius: 2px;
+  background-color: #eeeeee;
+}
+
+#x {
+  font-weight: 600;
+  margin-left: 12px;
+  color: blue;
+  background-color: #eeeeee;
+  border: none;
+}
+
+#price {
+  font-weight: 600;
+}
+
+input {
+  display: block;
+}
