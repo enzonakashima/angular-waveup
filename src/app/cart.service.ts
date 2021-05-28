@@ -7,22 +7,20 @@ export class CartService {
 
   constructor(private http: HttpClient) {}
 
-  addToCart(product) {
-    this.items.push(product);
+  addToCart(event) {
+    this.items.push(event);
   }
 
   getItems() {
     return this.items;
   }
 
+  remove(event) {
+    this.items.splice(event);
+  }
+
   clearCart() {
     this.items = [];
     return this.items;
-  }
-
-  getShippingPrices() {
-    return this.http.get<{ type: string; price: number }[]>(
-      '/assets/shipping.json'
-    );
   }
 }

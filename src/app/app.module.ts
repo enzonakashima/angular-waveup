@@ -16,6 +16,7 @@ import localePt from '@angular/common/locales/pt';
 import { registerLocaleData } from '@angular/common';
 import { LOCALE_ID, DEFAULT_CURRENCY_CODE } from '@angular/core';
 import { CartComponent } from './cart/cart.component';
+import { SearchComponent } from './search/search.component';
 
 registerLocaleData(localePt);
 
@@ -42,7 +43,8 @@ registerLocaleData(localePt);
     EventsComponent,
     TopBarComponent,
     EventDetailsComponent,
-    CartComponent
+    CartComponent,
+    SearchComponent
   ],
   bootstrap: [AppComponent],
   providers: [

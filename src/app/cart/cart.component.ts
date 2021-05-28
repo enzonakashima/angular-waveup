@@ -19,12 +19,16 @@ export class CartComponent implements OnInit {
     private formBuilder: FormBuilder
   ) {}
 
+  delete(event) {
+    this.cartService.remove(event);
+  }
+
   onSubmit(): void {
     //processar dados do checkout aqui
     this.items = this.cartService.clearCart();
     console.warn('Você foi cadastrado no evento!', this.checkoutForm.value);
     window.alert(
-      'Você foi cadastrado no evento!' + JSON.stringify(this.checkoutForm.value)
+      'Você foi cadastrado no evento!' //+ JSON.stringify(this.checkoutForm.value)
     );
     this.checkoutForm.reset;
   }

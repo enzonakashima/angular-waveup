@@ -2,10 +2,10 @@
   <app-top-bar></app-top-bar>
   <h3>Confirmação</h3>
 
-  <div class="cart-item" *ngFor="let item of items">
+  <div class="cart-item" *ngFor="let item of items index as i">
     <span>{{item.name}}</span>
     <span id="price">{{item.price | currency}}</span>
-    <button id="x">x</button>
+    <button id="x" (click)="delete(i)">x</button>
   </div>
 
   <form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()">
