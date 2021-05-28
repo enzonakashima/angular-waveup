@@ -1,7 +1,16 @@
-<div id="container" >
+<div id="container">
   <app-top-bar></app-top-bar>
   <h2>Eventos</h2>
   <div id="event" *ngFor="let event of events">
+
+    <p class="data">
+      <a class="button"><i class="material-icons">account_circle</i></a>
+      {{event.user}}
+    </p>
+
+    <p>
+      {{event.date}}
+    </p>
 
     <h3>
       <a [title]="event.name + ' details'" [routerLink]="['/events', event.id]">{{event.name}}</a>
