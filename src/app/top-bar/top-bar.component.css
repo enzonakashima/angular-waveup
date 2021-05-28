@@ -5,6 +5,7 @@
 .container-fluid {
   background-color: #ffffff;
   border-bottom: 1px solid rgb(173, 173, 173);
+  justify-content: space-evenly;
 }
 
 h1 {
