@@ -18,7 +18,7 @@ export class EventDetailsComponent implements OnInit {
 
   addToCart(event) {
     this.cartService.addToCart(event);
-    window.alert('Your event has been added to the cart!');
+    window.alert('O evento foi adicionado ao carrinho!');
   }
 
   ngOnInit() {

@@ -1,9 +1,22 @@
 <div class="form-group-row">
-
-  <label for="search" >Pesquisar</label>
+  <app-top-bar></app-top-bar>
+  <label for="search" >Pesquisar por nome do Evento</label>
 
   <div>
-    <input type="search" id="search" class="form-control">
+    <input type="search" id="search" class="form-control"  [(ngModel)]="searchText">
+  </div>
+
+  <div id="event" *ngFor="let event of events | filter:searchText">
+
+    <h4>
+      <a [title]="event.name + ' details'" [routerLink]="['/events', event.id]">{{event.name}}</a>
+    </h4>
+
+    <p *ngIf="event.description">
+      Descrição: {{event.description}}
+    </p>
+
+
   </div>
 
 </div>

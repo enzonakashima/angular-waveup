@@ -18,11 +18,14 @@ import { LOCALE_ID, DEFAULT_CURRENCY_CODE } from '@angular/core';
 import { CartComponent } from './cart/cart.component';
 import { SearchComponent } from './search/search.component';
 
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
+
 registerLocaleData(localePt);
 
 @NgModule({
   imports: [
     BrowserModule,
+    Ng2SearchPipeModule,
     FormsModule,
     HttpClientModule,
     ReactiveFormsModule,
@@ -32,7 +35,8 @@ registerLocaleData(localePt);
       { path: 'events', component: EventsComponent },
       { path: 'top-bar', component: TopBarComponent },
       { path: 'events/:eventId', component: EventDetailsComponent },
-      { path: 'cart', component: CartComponent }
+      { path: 'cart', component: CartComponent },
+      { path: 'search', component: SearchComponent }
     ])
   ],
   declarations: [
