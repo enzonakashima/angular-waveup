@@ -13,3 +13,9 @@ h1 {
   margin: 0;
   padding: 5px;
 }
+
+button {
+  border: none;
+  color: rgb(28, 143, 199);
+  background-color: white;
+}

@@ -22,6 +22,8 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { EquipmentComponent } from './equipment/equipment.component';
 import { EquipDetailsComponent } from './equip-details/equip-details.component';
 
+import { Location } from '@angular/common';
+
 registerLocaleData(localePt);
 
 @NgModule({

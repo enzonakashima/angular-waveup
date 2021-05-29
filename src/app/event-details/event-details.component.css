@@ -5,3 +5,9 @@ div:first-child {
 h2 {
   font-weight: 600;
 }
+
+img {
+  width: 300px;
+  height: 200px;
+  border-radius: 2%;
+}

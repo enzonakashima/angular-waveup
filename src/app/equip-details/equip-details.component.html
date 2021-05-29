@@ -1,12 +1,22 @@
 <div class="container-fluid">
-  <app-top-bar></app-top-bar>
+
+  <app-top-bar></app-top-bar>  
+
   <h2>Detalhes do Produto</h2>
 
   <div *ngIf="equipamento">
     <h3>{{equipamento.name}}</h3>
+
     <h4>{{equipamento.price | currency}}</h4>
+
     <p>{{equipamento.description}}</p>
+
     <img src="{{equipamento.image}}">
+
     <button class="button" (click)="addToCart(equipamento)">Comprar</button>
+
+    <a routerLink="/equipment"><i class="material-icons">back</i></a>
+
   </div>
+
 </div>
