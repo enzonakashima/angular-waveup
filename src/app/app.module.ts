@@ -19,6 +19,8 @@ import { CartComponent } from './cart/cart.component';
 import { SearchComponent } from './search/search.component';
 
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { EquipmentComponent } from './equipment/equipment.component';
+import { EquipDetailsComponent } from './equip-details/equip-details.component';
 
 registerLocaleData(localePt);
 
@@ -36,7 +38,9 @@ registerLocaleData(localePt);
       { path: 'top-bar', component: TopBarComponent },
       { path: 'events/:eventId', component: EventDetailsComponent },
       { path: 'cart', component: CartComponent },
-      { path: 'search', component: SearchComponent }
+      { path: 'search', component: SearchComponent },
+      { path: 'equipment', component: EquipmentComponent },
+      { path: 'equipment/:equipmentId', component: EquipDetailsComponent }
     ])
   ],
   declarations: [
@@ -48,7 +52,9 @@ registerLocaleData(localePt);
     TopBarComponent,
     EventDetailsComponent,
     CartComponent,
-    SearchComponent
+    SearchComponent,
+    EquipmentComponent,
+    EquipDetailsComponent
   ],
   bootstrap: [AppComponent],
   providers: [

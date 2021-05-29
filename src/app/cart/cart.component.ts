@@ -28,7 +28,7 @@ export class CartComponent implements OnInit {
     this.items = this.cartService.clearCart();
     console.warn('Você foi cadastrado no evento!', this.checkoutForm.value);
     window.alert(
-      'Você foi cadastrado no evento!' //+ JSON.stringify(this.checkoutForm.value)
+      'Compra finalizada com sucesso!' //+ JSON.stringify(this.checkoutForm.value)
     );
     this.checkoutForm.reset;
   }

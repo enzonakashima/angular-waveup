@@ -1,0 +1,25 @@
+<div id="container">
+  <app-top-bar></app-top-bar>
+  <h2>Equipamentos</h2>
+  <div id="equipment" *ngFor="let equipamento of equipment">
+
+    <p class="data">
+      <a class="button"><i class="material-icons">account_circle</i></a>
+      {{equipamento.user}}
+    </p>
+
+    <p>
+      {{equipamento.date}}
+    </p>
+
+    <h3>
+      <a [title]="equipamento.name + ' details'" [routerLink]="['/equipment', equipamento.id]"> {{equipamento.name}}</a>
+    </h3>
+
+    <p *ngIf="equipamento.description">
+      Descrição: {{equipamento.description}}
+    </p>
+
+
+  </div>
+</div>

@@ -1,0 +1,25 @@
+div {
+  background-color: white;
+}
+
+#equipment {
+  padding: 10px;
+  border-bottom: 4px solid rgb(198, 198, 211);
+}
+
+.data {
+  font-weight: 700;
+  font-size: 15px;
+}
+
+p {
+  margin: 0;
+}
+
+h2 {
+  margin: 6px 0 0 10px;
+}
+
+h3 {
+  font-size: 18px;
+}
