@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { equipment } from '../equipment';
 import { events } from '../events';
 
 @Component({
@@ -8,11 +9,10 @@ import { events } from '../events';
 })
 export class SearchComponent implements OnInit {
   events = events;
+  equipment = equipment;
   searchText;
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit() {
-  }
-
+  ngOnInit() {}
 }

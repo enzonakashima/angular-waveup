@@ -1,6 +1,6 @@
 <div class="form-group-row">
   <app-top-bar></app-top-bar>
-  <label for="search" >Pesquisar por nome do Evento</label>
+  <label for="search" >Pesquisar por nome do Evento ou Equipamento</label>
 
   <div>
     <input type="search" id="search" class="form-control"  [(ngModel)]="searchText">
@@ -9,6 +9,7 @@
   <div id="event" *ngFor="let event of events | filter:searchText">
 
     <h4>
+      <h5>Evento</h5>
       <a [title]="event.name + ' details'" [routerLink]="['/events', event.id]">{{event.name}}</a>
     </h4>
 
@@ -16,7 +17,17 @@
       Descrição: {{event.description}}
     </p>
 
+  </div>
 
+  <div *ngFor="let equipamento of equipment | filter:searchText">
+    <h4>
+      <h5>Equipamento</h5>
+      <a [title]="equipamento.name + ' details'" [routerLink]="['/equipment', equipamento.id]"> {{equipamento.name}}</a>
+    </h4>
+
+    <p *ngIf="equipamento.description">
+      Descrição: {{equipamento.description}}
+    </p>
   </div>
 
 </div>

@@ -2,6 +2,11 @@ div:first-child {
   padding: 10px;
 }
 
+img {
+  width: 300px;
+  height: 300px;
+}
+
 h2 {
   font-weight: 600;
 }
