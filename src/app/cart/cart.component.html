@@ -5,24 +5,30 @@
   <div class="cart-item" *ngFor="let item of items index as i">
     <span>{{item.name}}</span>
     <span id="price">{{item.price | currency}}</span>
-    <button id="x" (click)="delete(i)">x</button>
+    <button id="x" (click)="delete(i)">Remover</button>
   </div>
 
   <form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()">
-    <div>
-      <label for="number">
-      NÚMERO DO CARTÃO
-    </label>
-      <input id="number" type="number" formControlName="number" />
+    <div *ngFor="let item of items">
+      <div *ngIf="item.price > 0">
+        <div>
+          <label for="number">
+          NÚMERO DO CARTÃO
+        </label>
+          <input id="number" type="number" formControlName="number" />
+        </div>
+
+        <div>
+          <label for="expiration">
+          VALIDADE
+        </label>
+          <input id="expiration" type="date" formControlName="expiration" />
+        </div>
+      </div>
     </div>
 
-    <div>
-      <label for="expiration">
-      VALIDADE
-    </label>
-      <input id="expiration" type="date" formControlName="expiration" />
-    </div>
-
-    <button class="button" type="submit">Finalizar</button>
+    <button *ngFor="let item of items" class="button" type="submit">Finalizar</button>
   </form>
+  <button class="button" [routerLink]="['/search']">Continuar comprando</button>
+
 </div>

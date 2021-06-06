@@ -1,19 +1,21 @@
 <nav class="navbar fixed-top navbar-light bg-light">
   <div class="container-fluid">
 
-    <button (click)="previousPage()"><i class="material-icons">undo</i></button>
+    <button [title]="'Página anterior'" (click)="previousPage()"><i class="material-icons">undo</i></button>
 
     <a class="navbar-brand">
       <h1>WaveUP</h1>
     </a>
 
-    <a routerLink="/events" class="button fancy-button"><i class="material-icons">event</i></a>
+    <a [title]="'Eventos'" routerLink="/events" class="button fancy-button"><i class="material-icons">event</i></a>
 
-    <a routerLink="/equipment" class="button fancy-button"><i class="material-icons">surfing</i></a>
+    <a [title]="'Equipamentos'" routerLink="/equipment"
+      class="button fancy-button"><i class="material-icons">surfing</i></a>
 
-    <a routerLink="/cart" class="button fancy-button"><i class="material-icons">shopping_cart</i></a>
+    <a [title]="'Carrinho'" routerLink="/cart"
+      class="button fancy-button"><i class="material-icons">shopping_cart</i></a>
 
-    <a routerLink="/search" class="button fancy-button"><i class="material-icons">search</i></a>
+    <a [title]="'Pesquisar'" routerLink="/search" class="button fancy-button"><i class="material-icons">search</i></a>
   </div>
 </nav>
 
