@@ -23,6 +23,16 @@ export class CartComponent implements OnInit {
     this.cartService.remove(event);
   }
 
+  //this.items.indexOf('price')
+
+  checkPrice(){
+    for(var item of this.items){
+      if (item.price > 0){
+        return true;
+      }
+    }
+  }
+
   onSubmit(): void {
     //processar dados do checkout aqui
     this.items = this.cartService.clearCart();

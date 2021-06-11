@@ -2,6 +2,10 @@
   <app-top-bar></app-top-bar>
   <h3>Confirmação</h3>
 
+  <div *ngIf="!this.items.length">
+    O carrinho está vazio.
+  </div>
+
   <div class="cart-item" *ngFor="let item of items index as i">
     <span>{{item.name}}</span>
     <span id="price">{{item.price | currency}}</span>
@@ -9,25 +13,25 @@
   </div>
 
   <form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()">
-    <div *ngFor="let item of items">
-      <div *ngIf="item.price > 0">
-        <div>
-          <label for="number">
+
+    <div *ngIf="this.checkPrice()">
+      <div>
+        <label for="number">
           NÚMERO DO CARTÃO
         </label>
-          <input id="number" type="number" formControlName="number" />
-        </div>
+        <input id="number" type="number" formControlName="number" />
+      </div>
 
-        <div>
-          <label for="expiration">
+      <div>
+        <label for="expiration">
           VALIDADE
         </label>
-          <input id="expiration" type="date" formControlName="expiration" />
-        </div>
+        <input id="expiration" type="date" formControlName="expiration" />
       </div>
     </div>
 
-    <button *ngFor="let item of items" class="button" type="submit">Finalizar</button>
+
+    <button *ngIf="this.items.length" class="button" type="submit">Finalizar</button>
   </form>
   <button class="button" [routerLink]="['/search']">Continuar comprando</button>
 

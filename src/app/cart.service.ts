@@ -16,7 +16,7 @@ export class CartService {
   }
 
   remove(event) {
-    this.items.splice(event);
+    this.items.splice(event, 1);
   }
 
   clearCart() {
